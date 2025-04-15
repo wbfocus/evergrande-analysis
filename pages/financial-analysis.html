@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>财务分析 - 恒大地产财务造假事件分析</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">恒大财务造假分析</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="background.html">恒大背景</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="timeline.html">事件时间线</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="financial-analysis.html">财务分析</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fraud-methods.html">造假手法</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="causes.html">原因分析</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="impacts.html">影响评估</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="penalties.html">监管处罚</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lessons.html">启示教训</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于本站</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="fw-bold" data-aos="fade-up">财务造假数据分析</h1>
+                    <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="../index.html">首页</a></li>
+                            <li class="breadcrumb-item active">财务分析</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="content-page">
+        <div class="container">
+            <div class="row">
+                <!-- 侧边导航 -->
+                <div class="col-lg-3">
+                    <div class="sidebar">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">本页内容</h5>
+                                <nav class="nav flex-column">
+                                    <a class="nav-link" href="#overview">财务造假概述</a>
+                                    <a class="nav-link" href="#data-2019">2019年造假数据</a>
+                                    <a class="nav-link" href="#data-2020">2020年造假数据</a>
+                                    <a class="nav-link" href="#comparison">造假规模对比</a>
+                                    <a class="nav-link" href="#impact">财务影响分析</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 内容区域 -->
+                <div class="col-lg-9">
+                    <!-- 财务造假概述 -->
+                    <section id="overview" data-aos="fade-up">
+                        <h2>财务造假概述</h2>
+                        <p>根据中国证监会的调查结果，恒大地产在2019年和2020年的年度报告中存在严重的财务造假行为。这一造假规模创下了全球财务舞弊案例的历史之最，远超此前任何一起财务造假案例。</p>
+                        <div class="alert alert-danger">
+                            <strong>核心数据：</strong> 恒大地产两年合计虚增收入5641.46亿元，虚增利润920.11亿元。
+                        </div>
+                        <p>恒大地产的财务造假主要表现为通过提前确认收入的方式，大幅虚增营业收入和利润。这种做法不仅违反了会计准则，也严重误导了投资者和市场。</p>
+                        
+                        <!-- 总体数据图表 -->
+                        <div class="chart-container my-5" style="height: 400px;">
+                            <canvas id="financial-fraud-chart"></canvas>
+                        </div>
+                    </section>
+
+                    <!-- 2019年造假数据 -->
+                    <section id="data-2019" data-aos="fade-up">
+                        <h2>2019年造假数据</h2>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p>2019年，恒大地产在财务报表中存在严重造假：</p>
+                                <ul>
+                                    <li><strong>虚增收入：</strong> 2139.89亿元，占当期营业收入的50.14%</li>
+                                    <li><strong>对应虚增成本：</strong> 1732.67亿元</li>
+                                    <li><strong>虚增利润：</strong> 407.22亿元，占当期利润总额的63.31%</li>
+                                </ul>
+                                <p>这意味着恒大地产2019年公布的收入中，有超过一半是虚假的；公布的利润中，超过六成来自造假。</p>
+                                <p>根据证监会的调查，恒大地产2019年真实的营业收入应为2126.57亿元，而非公布的4266.46亿元；真实的利润总额应为236.89亿元，而非公布的644.11亿元。</p>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="chart-container" style="height: 300px;">
+                                    <canvas id="fraud-ratio-2019"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="table-responsive mt-4">
+                            <table class="table table-bordered">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>项目</th>
+                                        <th>公布数据（亿元）</th>
+                                        <th>真实数据（亿元）</th>
+                                        <th>虚增金额（亿元）</th>
+                                        <th>虚增比例</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>营业收入</td>
+                                        <td>4266.46</td>
+                                        <td>2126.57</td>
+                                        <td class="text-danger">2139.89</td>
+                                        <td>50.14%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>营业成本</td>
+                                        <td>3077.79</td>
+                                        <td>1345.12</td>
+                                        <td class="text-danger">1732.67</td>
+                                        <td>56.30%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>利润总额</td>
+                                        <td>644.11</td>
+                                        <td>236.89</td>
+                                        <td class="text-danger">407.22</td>
+                                        <td>63.31%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- 2020年造假数据 -->
+                    <section id="data-2020" data-aos="fade-up">
+                        <h2>2020年造假数据</h2>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p>2020年，恒大地产的财务造假行为进一步加剧：</p>
+                                <ul>
+                                    <li><strong>虚增收入：</strong> 3501.57亿元，占当期营业收入的78.54%</li>
+                                    <li><strong>对应虚增成本：</strong> 2988.68亿元</li>
+                                    <li><strong>虚增利润：</strong> 512.89亿元，占当期利润总额的86.88%</li>
+                                </ul>
+                                <p>这表明恒大地产2020年公布的收入中，近八成是虚假的；公布的利润中，近九成来自造假。造假程度较2019年明显加剧。</p>
+                                <p>根据证监会的调查，恒大地产2020年真实的营业收入应为957.83亿元，而非公布的4459.40亿元；真实的利润总额应为77.32亿元，而非公布的590.21亿元。</p>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="chart-container" style="height: 300px;">
+                                    <canvas id="fraud-ratio-2020"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="table-responsive mt-4">
+                            <table class="table table-bordered">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>项目</th>
+                                        <th>公布数据（亿元）</th>
+                                        <th>真实数据（亿元）</th>
+                                        <th>虚增金额（亿元）</th>
+                                        <th>虚增比例</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>营业收入</td>
+                                        <td>4459.40</td>
+                                        <td>957.83</td>
+                                        <td class="text-danger">3501.57</td>
+                                        <td>78.54%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>营业成本</td>
+                                        <td>3344.07</td>
+                                        <td>355.39</td>
+                                        <td class="text-danger">2988.68</td>
+                                        <td>89.37%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>利润总额</td>
+                                        <td>590.21</td>
+                                        <td>77.32</td>
+                                        <td class="text-danger">512.89</td>
+                                        <td>86.88%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- 造假规模对比 -->
+                    <section id="comparison" data-aos="fade-up">
+                        <h2>造假规模对比</h2>
+                        <p>恒大地产的财务造假规模远超历史上其他著名的财务舞弊案例：</p>
+                        
+                        <div class="chart-container my-5" style="height: 350px;">
+                            <canvas id="fraud-comparison-chart"></canvas>
+                        </div>
+                        
+                        <div class="row g-4 mt-3">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="card-title">恒大地产</h4>
+                                        <p class="card-text">两年合计虚增收入5641.46亿元，虚增利润920.11亿元。</p>
+                                        <p class="card-text">2020年虚增收入3501.57亿元，相当于凭空捏造了一家保利地产（2020年保利地产营收2432.08亿元）。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="card-title">康美药业</h4>
+                                        <p class="card-text">曾被称为"A股造假王"，虚增货币资金886亿元。</p>
+                                        <p class="card-text">恒大地产的造假规模是康美药业的6.4倍。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="card-title">美国安然公司</h4>
+                                        <p class="card-text">1997-2001年虚构利润5.86亿美元，约合42亿人民币。</p>
+                                        <p class="card-text">恒大地产虚增利润是安然公司的21.9倍。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 财务影响分析 -->
+                    <section id="impact" data-aos="fade-up">
+                        <h2>财务影响分析</h2>
+                        <p>恒大地产的财务造假行为对公司自身、投资者和市场产生了深远影响：</p>
+                        
+                        <div class="accordion mt-4" id="accordionImpact">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        对恒大集团的财务影响
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionImpact">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li><strong>财务重述：</strong> 恒大集团在2023年补发的年报中更改了收入确认政策，导致2021年和2022年净亏损超8100亿元。</li>
+                                            <li><strong>资产负债表恶化：</strong> 真实财务状况显示负债总额2.44万亿元，超出资产，实际已资不抵债。</li>
+                                            <li><strong>现金流枯竭：</strong> 由于收入被提前确认，实际现金流远低于账面数据，导致无法支付债务。</li>
+                                            <li><strong>债务违约：</strong> 财务造假掩盖了真实的财务状况，最终导致大规模债务违约。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        对投资者的财务影响
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionImpact">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li><strong>股东权益损失：</strong> 恒大集团股价从高点下跌超过95%，市值蒸发超过2万亿港元。</li>
+                                            <li><strong>债券持有人损失：</strong> 恒大集团发行的债券价格暴跌，多数债券已经违约，投资者面临巨额损失。</li>
+                                            <li><strong>投资决策误导：</strong> 虚假的财务数据导致投资者做出错误的投资决策，无法准确评估风险。</li>
+                                            <li><strong>信任危机：</strong> 对中国房地产企业财务报表的整体信任度下降，增加了投资者的风险溢价要求。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        对市场的财务影响
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionImpact">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li><strong>行业估值下降：</strong> 房地产行业整体估值水平下降，融资成本上升。</li>
+                                            <li><strong>审计机构信任危机：</strong> 普华永道等审计机构专业性遭遇重大信任危机，20多家大型上市公司终止与普华永道的合作。</li>
+                                            <li><strong>监管环境变化：</strong> 促使监管部门加强对上市公司财务信息的审核和监管，提高了市场透明度要求。</li>
+                                            <li><strong>系统性风险担忧：</strong> 引发市场对房地产行业可能存在的系统性风险的担忧，影响整体市场情绪。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="mt-5 text-center" data-aos="fade-up">
+                        <p class="lead">恒大地产的财务造假案例是中国资本市场历史上规模最大的财务舞弊案例，其造假手法和深层原因值得深入研究。</p>
+                        <div class="mt-4">
+                            <a href="fraud-methods.html" class="btn btn-primary me-2">了解造假手法</a>
+                            <a href="causes.html" class="btn btn-outline-primary">探究原因分析</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>恒大地产财务造假事件分析</h5>
+                    <p class="small">本网站提供关于恒大地产财务造假事件的全面分析和研究，旨在为公众提供专业、客观的信息。</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>快速链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-white">首页</a></li>
+                        <li><a href="timeline.html" class="text-white">事件时间线</a></li>
+                        <li><a href="financial-analysis.html" class="text-white">财务分析</a></li>
+                        <li><a href="about.html" class="text-white">关于本站</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>资源</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html#references" class="text-white">参考资料</a></li>
+                        <li><a href="about.html#data-sources" class="text-white">数据来源</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="small mb-0">© 2025 恒大地产财务造假事件分析网站 | 本网站仅供研究和教育目的使用</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="btn btn-primary btn-sm rounded-circle">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
